@@ -1,0 +1,66 @@
+export const items = [
+    {
+        desc: ["Learn more about  Programming -", "complete beginner course"],
+        level: "Beginer",
+        title: ["Coding"],
+        image: "./photo_5834803979350033376_y.jpg",
+        link:"/Compnext",
+    },
+    {
+        desc: ["Master JavaScript Programming -", "complete beginner course"],
+        level: "Advanced",
+        title: ["Coding","JavaScript"],
+        image: "./photo_5834803979350033381_y.jpg",
+        link:"/Next",
+    },
+    {
+        desc: ["Master Python Programming -", "complete Advanced course"],
+        level: "Advanced",
+        title: ["Coding","Python"],
+        image: "photo_5834803979350033375_y.jpg",
+        link:"/PythonNext",
+    },
+    {
+        desc: ["Master HTML Programming -", "complete Beginer course"],
+        level: "Beginer",
+        title: ["Coding","HTML"],
+        image: "HTML.PNG",
+        link:"/HTMLNext",
+    },
+    {
+        desc: ["Master SQL Programming -", "complete expert course"],
+        level: "Expert",
+        title:["Coding","SQL"],
+        image: "photo_5834803979350033374_y.jpg",
+        link:"/S",
+    },
+    {
+        desc: ["Master C & C++ Programming -", "complete expert course"],
+        level: "Expert",
+        title:["Coding","C++"],
+        image: "photo_5834803979350033382_y.jpg",
+        link:"/C",
+    },
+    {
+        desc: ["Master PHP Programming -", "complete  course"],
+        level: "Advanced",
+        title:["Coding","PHP"],
+        image: "PHP.PNG",
+        link:"/PHPnext",
+    },
+    {
+        desc: ["Master React Programming -", "complete Beginer course"],
+        level: "Beginer",
+        title:["Coding","React"],
+        image: "photo_5834803979350033387_y.jpg",
+        link:"/ReactNext",
+    },
+    {
+        desc: ["Master NodeJS Programming -", "complete expert course"],
+        level: "Expert",
+        title:["Coding","NodeJS"],
+        image: "photo_5834803979350033388_y.jpg",
+        link:"/NodeNext",
+    },
+
+];

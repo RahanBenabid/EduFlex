@@ -1,0 +1,67 @@
+.body{
+   
+   
+    height: 1000px;
+    background-image: linear-gradient( #F8EBE8,#DAA69B);
+} 
+.Qcontainer{
+    width: 640px;
+    margin: auto;
+    background: white;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 40px 50px;
+
+
+}
+.Qcontainer h1{
+    color: var(--font-color);
+}
+.Qcontainer hr{
+    height: 2px;
+    border: none;
+    background-color: #cbcaca;
+}
+.Qcontainer h2{
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--font-color);
+}
+.Qcontainer ul li{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 15px;
+    border: 1px solid #9a9898;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Qcontainer button{
+    margin: auto;
+    width: 250px;
+    height: 65px;
+    background-color: var(--button-color);
+    color: #fff;
+    font-size: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-weight: 300;
+    cursor: pointer;
+}
+.Qcontainer .index{
+    margin: auto;
+    font-size: 18px;
+}
+.correct{
+    background: #dffff2;
+    /* background-color: #00d397; */
+}
+.wrong{
+    background: #FFEBEB;
+    /* background-color: #FF4A4A; */
+}

@@ -1,0 +1,305 @@
+
+
+.lili{
+  margin-top: 1rem!important;
+
+}
+
+.inner-box1 {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+}
+
+form {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: opacity 0.02s 0.4s;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo1 {
+  display: flex;
+  align-items: center;
+}
+
+.logo1 img {
+  width: 130px;
+margin-left: -1rem;
+}
+
+
+
+.heading h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #151111;
+}
+
+.heading h6 {
+  color: #bababa;
+  font-weight: 400;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+.toggle {
+  color: #dcc0c0;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: 0.3s ;
+}
+
+
+
+.input-wrap2 {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+
+
+
+.input-field2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #e9e6e6;
+  transition: ease;
+  transition: 0.4s;
+}
+
+.spliter{
+  color:#bbb;
+  margin-left: 6.9rem;
+}
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  pointer-events: none;
+  transition:  0.3 ease;
+}
+
+
+.social-container{
+  display: flex;
+  position:absolute;
+  border-width: .55px;
+  border: #7a3131;
+  border-radius: 0.5rem;
+  
+}
+
+
+.social{
+  
+  padding: .5rem;
+  margin: .6rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+ padding-left:  1rem;
+  width: 8rem;
+  
+  
+}
+#pass{
+  font-size: 12px;
+  text-align: center;
+  color:#bbb ;
+}
+.social img{
+  width: 40px;
+  
+  margin-top: 0.3rem;
+}
+.social img:hover{
+  cursor: pointer;
+}
+
+
+.input-field.active  {
+  border-bottom-color: #DAA69B;
+    transition:  0.3 ease;
+}
+
+
+input:focus+ label,input:valid+label{
+  transform:translate(-10px,-30px)scale(0.88);
+  height: 80px;
+  line-height: 7px;
+  z-index: 1111;
+  transition:  0.3 ease-in;
+  color: #DAA69B;
+ 
+}
+
+.sign-btn {
+  margin-top: 7rem;
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #DAA69B;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: var(--shadow);
+  font-weight:  400;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+
+
+.sign-btn:hover {
+  background-color: #0c0251;
+}
+
+.check{
+  display: flex;
+}
+.check p{
+  font-size: .87rem;
+  margin-left: .5rem;
+  color: #bbb;
+}
+
+.ttext {
+  color: #bbb;
+  font-size: 0.8rem;
+  width: 50%;
+  display: inline;
+  margin-left: 2.6rem;
+}
+.ttext-bof{
+
+  margin-left: 8rem;margin-top: 2rem;
+ 
+}
+.ttext span{
+  color: #0c0251;
+  text-decoration:underline;
+}
+.ttext a {
+  color: #bbb;
+ 
+  transition: 0.3s;
+}
+
+
+
+main.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main.sign-up-mode .forms-wrap {
+  left: 55%;
+}
+
+main.sign-up-mode .carousel {
+  left: 0%;
+}
+
+.carousel1 {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left:     45%;
+  top: 0;
+    /* background-color: #ffe0d2; */
+  border-radius: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  
+  overflow: hidden;
+ 
+}
+.bof{margin-top: 4rem;}
+
+
+.images-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+.text-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-wrap {
+  max-height: 2.2rem;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+
+.bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullets span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #aaa;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bullets span.active {
+  width: 1.1rem;
+  background-color: #151111;
+  border-radius: 1rem;
+}
+

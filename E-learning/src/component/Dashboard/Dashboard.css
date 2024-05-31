@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.boardcontainer {
+
+
+    background-color: var(--main_color);
+}
+
+.boardtitle {}
+
+.editeprofile {
+
+    display: flex;
+}
+
+.boardleft {
+
+    border: 1px solid rgb(209, 208, 208);
+    background-color: #fff;
+    border-radius: 3px;
+    width: 40%;
+    margin-left: 7rem !important;
+    margin: 1rem;
+
+}
+
+.boardright {
+
+    width: 60%;
+    margin-left: -4rem !important;
+    margin: 1rem;
+}
+
+.ph {
+    display: flex;
+
+}
+
+.ph h1 {
+    margin-top: .7rem;
+    margin-left: 1rem;
+
+}
+
+.profile-card p {
+    margin-left: 7rem;
+    color: #abaaaa;
+    margin-top: -2.4rem;
+}
+
+.profile-card span{
+    color: #Daa69B;
+}

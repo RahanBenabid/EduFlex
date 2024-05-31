@@ -1,0 +1,197 @@
+.todo-input {
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: #fff;
+    border: 2px solid #DAA69B;
+    border-radius: 30px;
+    color: black;
+
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+
+.input-container {
+    margin-left: 2rem;
+    width: 90%;
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.todo-input::placeholder {
+    color: #bfbfbf;
+}
+
+.add-button {
+    border: none;
+    outline: none;
+    background: #DAA69B;
+    color: #fff;
+
+    cursor: pointer;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+.empty-image {
+    margin: 55px auto 0;
+    display: block;
+
+}
+
+.todo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 1rem;
+    padding: 10px 12px;
+    border: 2px solid #DAA69B;
+    transition: all 0.2s ease;
+}
+
+.todo:first-child {
+    margin-top: 0;
+
+    border: 2px solid #DAA69B;
+
+}
+
+.todo:last-child {
+    margin-bottom: 0;
+    border: 2px solid #DAA69B;
+}
+
+/* .todo:hover {
+    background-color: #DAA69B;
+    
+} */
+
+
+.todo span {
+    margin-left: -21rem;
+    min-width: 200px;
+
+    cursor: pointer;
+    font-size: 19px;
+
+}
+
+.add-button img {
+    margin-top: .35rem;
+}
+
+
+
+input[type='checkbox'] {
+    margin-left: 2rem;
+    color:#DAA69B;
+;}
+
+
+input:checked {
+    text-decoration: line-through
+}
+
+
+
+.todo:hover span::before {
+    border-color: #eee;
+}
+
+.todo .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    font-size: 24px;
+}
+
+.todos-container {
+    height: 350px;
+
+    overflow: overlay;
+}
+
+.todos-container::-webkit-scrollbar-track {
+    background: rgb(247, 247, 247);
+    border-radius: 20px
+}
+
+.todos-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.todos-container:hover::-webkit-scrollbar {
+    width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 7rem;
+    margin-bottom: 25px;
+}
+
+.filter {
+    color: var(--font-color);
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #DAA69B;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+    background-color: #DAA69B;
+    border-radius: 5px;
+}
+
+.delete-all {
+    color: var(--font-color);
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #DAA69B;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.delete-all:hover {
+    border-radius: 5px;
+    background-color: #DAA69B;
+}
+
+#av {
+    color: var(--font-color);
+    text-align: center;
+    margin-top: 40PX;
+    font-size: 20px;
+}
+
+.ouf:checked {
+    margin-left: 2rem;
+    color: #DAA69B;
+    font-size: larger;
+}
+
+.empty-image {
+    width: 390px;
+}
+
+.delete-btn  {
+    width: 30px !important;
+}

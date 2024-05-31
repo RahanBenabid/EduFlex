@@ -1,0 +1,74 @@
+.Motivation-wrapper {
+  
+    
+     width: 100%;
+     margin-right: 5rem;
+     
+     
+ }
+ .mhome-container {
+    background-color: #fff !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4.5rem;
+    width: 100%;
+
+
+
+}
+ .motivation-title{
+     font-size: 2.3rem;
+     color: var(--font-color);
+   margin-right: 7rem;
+     margin-top: -1rem;
+     margin-bottom: 2rem;
+     
+ }
+ 
+ 
+ 
+   
+
+ 
+
+ .check{
+     padding-top: 1.5rem;
+    
+ }
+ 
+ .home-right img{
+    width: 900px;
+ }
+ .home-right2 img{
+    width: 750px;
+    
+ 
+ }
+ #tit{
+   
+    padding-top: 1rem;
+    margin-top: .3rem;
+    font-size:33px;
+  font-weight:500 ;
+display: flex;
+  color: var(--font-color);
+ 
+
+}
+#tit img{
+    width: 70px;
+    margin-right:1rem ;
+
+}
+
+
+#cic{
+    
+   
+    color: var(--font-color);
+    margin-left: 10%;
+    margin-top: .2rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+}

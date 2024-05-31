@@ -1,0 +1,141 @@
+.header {
+    margin-top: -8rem;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: #F8EBE8;
+    padding-bottom: 2rem;
+}
+
+.all {
+    width: 100%;
+    justify-content: space-between;
+    row-gap: 2rem;
+
+}
+
+.header img {
+    margin-top: 5rem;
+    margin-left: 7rem;
+    display: flex;
+
+}
+
+.navbar {
+    display: flex;
+    row-gap: 2rem;
+    z-index: 9999;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    color: var(--font-color);
+    margin-top: -5rem;
+    margin-left: 45rem;
+
+}
+
+.navbar a {
+    color: var(--font-color);
+    font-size: larger;
+
+}
+
+.navbar a:hover {
+    color: #DAA69B;
+}
+
+.bheader {
+    margin-top: -0.5rem;
+    width: 105px;
+    border-color: #DAA69B;
+    border-style: solid;
+    border: 11rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: #DAA69B;
+    box-shadow: var(--shadow);
+    font-weight: 300;
+
+}
+
+.bheader:hover {
+    background-color: var(--font-color);
+    color: #FFF;
+}
+
+.bheader1 {
+    margin-top: -0.5rem;
+    padding: 3rem;
+    width: 105px;
+}
+
+
+.dropdown .dropbtn {
+    margin-top: .5rem;
+    background-color: transparent;
+    color: inherit;
+margin-left: 3rem;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown .dropbtn {
+    width: 70px ;
+    border-radius: 50%;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+
+
+    min-width: 700px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -10rem;
+
+}
+
+
+.dropdown-content a {
+    color: var(--font-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+
+.dropdown-content a img {
+    margin-right: 20px;
+    margin-left: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 45px;
+    height: 45px;
+}
+.p{
+    width: 20px !important;
+}

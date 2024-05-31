@@ -1,0 +1,31 @@
+.course-module {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .completed {
+    background-color: #e8f5e9;
+  }
+  
+  .module-content {
+    flex-grow: 1;
+    margin-right: 16px;
+  }
+  
+  .completion-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .completion-btn:hover {
+    background-color: #45a049;
+  }

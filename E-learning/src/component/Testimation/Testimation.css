@@ -1,0 +1,116 @@
+
+
+.test{
+	
+    border-radius: 0%;
+    background-color: rgb(255, 252, 252)!important;
+    padding: auto;
+    padding-top: 10px;
+    margin-bottom: 4rem;
+    height: 600px;
+    
+
+  
+}
+
+.testimonial-carousel::before {
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+
+height: 100%;
+width: 0;
+background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+z-index: 1;
+}
+
+.testimonial-carousel::after {
+position: absolute;
+content: "";
+top: 0;
+right: 0;
+height: 100%;
+width: 0;
+background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+z-index: 1;
+}
+
+
+
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+margin-top: 24px;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+
+display: inline-block;
+margin: 0 5px;
+width: 15px;
+height: 15px;
+border: 1px solid #CCCCCC;
+transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+background: var(--primary);
+border-color: var(--primary);
+}
+.a{
+
+
+}
+
+.terminalTitle{
+text-align: left;
+margin-left: 9rem;
+color: var(--font-color);
+font-size: 30px;
+
+}
+.testimonial__img{
+text-align: right;
+}
+.testimonial__content{
+width: 50%;
+margin-top: -26rem;
+align-self: center;
+height: 400px;
+
+}
+.sub-title{
+font-size: 1.6rem;
+
+
+margin-top: 1.9rem;
+}
+.single__testimonial p{
+font-size: 20px;
+margin-top: .7rem;
+
+}
+.student__info{
+margin-top: 1rem;
+
+z-index: 9999;
+}
+.testimonial__img img{
+width: 550px;
+margin-right: 7rem;
+}

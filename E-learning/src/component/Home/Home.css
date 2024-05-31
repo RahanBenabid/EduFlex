@@ -1,0 +1,141 @@
+
+.home-wrapper {
+   
+    margin-top: 1rem;
+    position: relative;
+      z-index: 1;
+      
+}
+.home-container {
+    background-color: var(--main_color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4.5rem;
+    width: 100%;
+
+
+
+}
+.home-left {
+    margin-left: 4rem;
+    gap: 3rem;
+    
+    
+   
+}
+.home-right img{
+/* width: 800px; */
+margin-right: 2rem;
+margin-top:5rem;
+}
+
+.home-title {
+   
+    z-index: 1;
+    margin-left: 2rem;
+    font-size: 2.8rem;
+    color: var(--font-color);
+    font-weight:500 ;  
+}
+.home-title span{
+    color: rgba(231, 92, 92, 0.732);
+}
+.secondary-text{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+    color: rgb(50, 48, 62);
+
+}
+.bbhome{
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+}
+.search::placeholder{
+font-size: 1.2rem;
+font-weight: 300;
+
+}
+.search{
+   background-color: #fff;
+   border-radius: 19px;
+   margin-left: 1rem;
+   margin-top: 3rem;
+   width: 450px;
+   padding: 1.35rem;
+   border: none;
+   
+}
+.s-icon{
+    width: 40px;
+    margin-top: 1rem;
+    transform: translate(-150%,45%);
+}
+
+
+.oinput-container {
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+}
+
+/* .oinput {
+  width: 50px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin-left: 16rem;
+  margin-top: -8rem;
+  padding: 18px 18px;
+  background-color: transparent;
+  background-color:#DAA69B;
+  transition: all .5s ease-in-out;
+} */
+
+.oinput::placeholder {
+  
+  color: transparent;
+}
+
+.oinput:focus::placeholder {
+  color: rgb(255, 255, 255);
+
+}
+
+.oinput:focus,.oinput:not(:placeholder-shown) {
+  background-color: var(--second_color);
+  border: 1px solid #DAA69B ;
+  width: 400px;
+  /* cursor: none;???? */
+  padding: 18px 16px 18px 45px;
+  margin-left: 3rem;
+}
+
+.oicon{
+  /* position: absolute; */
+  left: 0;
+  height: 48px;
+  width: 48px;
+  padding: .6rem;
+  background-color: #DAA69B;
+  border-radius: 99px;
+  z-index: -1;
+  cursor: pointer;
+  border: 1px solid #DAA69B;
+}
+
+.oinput:focus + .oicon,.oinput:not(:placeholder-shown) + .oicon {
+  z-index: 0;
+  /* background-color: transparent; */
+  border: none;
+}
+.oinput  .oicon {
+
+  background-color: transparent;
+  border: none;
+}

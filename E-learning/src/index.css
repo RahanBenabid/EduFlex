@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+:root {
+  --main_color: #F8EBE8;
+  --second_color: #EED7D2;
+  --button-color: #DAA69B;
+  --font-color: #212352;
+  --shadow: 0px 23px 21px -8px rgba(252, 85, 93, 0.25);
+}
+
+
+
+.button {
+  background-color: #DAA69B;
+  font-size: 1.2rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  box-shadow: var(--shadow);
+  font-weight: 300;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--font-color);
+}
+
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 5rem;
+}
+
+.flexCenter {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+
+
+
+.buttons {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+} 

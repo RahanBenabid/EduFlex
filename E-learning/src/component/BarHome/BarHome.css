@@ -1,0 +1,44 @@
+.bar-container{
+ 
+    background-color: var(--second_color);
+    padding-right: 8rem;
+}
+.icon-set{
+  display: flex;
+  margin-left: 2.7rem;
+      gap: 2rem;
+    align-items: center;
+    justify-content: space-between;  
+
+}
+.icon-set img{
+    border-radius: 1rem;
+  padding: 0.7rem;
+  width: 120px;
+  margin: 1.5rem auto  1.5rem;
+    background-color: #fff;
+    margin-left: 3rem;
+}
+
+
+.barTitle{
+  font-size: 29px;
+    font-weight:550 ;
+    color: var(--font-color);
+  
+}
+.barText{
+  font-size: 20px;
+  color: var(--font-color);
+font-weight: 400;
+
+
+}
+
+.icon-set span{
+  font-size:2.5rem;
+  margin-left: 1rem;
+   
+}
+
+ 

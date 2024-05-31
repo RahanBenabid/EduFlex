@@ -1,0 +1,32 @@
+.bbar-container{
+   margin-top: 4rem;
+    background-color: var(--second_color);
+}
+.bicon-set{
+  display: flex;
+  
+      gap: 2rem;
+    align-items: center;
+    justify-content: space-between;  
+
+}
+.bicon-set img{
+    border-radius: 1rem;
+  padding: 0.7rem;
+  margin: 1rem auto  1rem;
+    background-color: aliceblue;
+}
+.bicon-set p{
+    font-size: 1.7rem;
+    font-weight:550 ;
+    color: var(--font-color);
+
+    margin-left: -4rem;
+    
+    margin-right: 2rem;
+}
+.bicon-set span{
+  font-size:2.5rem;
+  margin-left: 1rem;
+   
+}

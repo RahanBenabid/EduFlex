@@ -1,5 +1,5 @@
 const express = require("express");
-const { addCourse, getAllCourses, getCourse } = require("../controller/courseData.js");
+const { addCourse, getAllCourses, getCourse } = require("../controller/onlineCourse.js");
 const router = express.Router();
 
 router.post("/onlineCourses", addCourse);

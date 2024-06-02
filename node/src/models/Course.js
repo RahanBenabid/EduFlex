@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 
 const courseSchema = new mongoose.Schema({
+  name: String,
   title: String,
   description: String,
   fileSize: String,
@@ -9,6 +10,7 @@ const courseSchema = new mongoose.Schema({
     default: Date.now,
   },
   filepath: String,
+  userId: String
 });
 
 const Course = mongoose.model('Course', courseSchema);

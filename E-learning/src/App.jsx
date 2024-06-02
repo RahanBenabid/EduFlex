@@ -31,6 +31,8 @@ import Ui from './component/Next/Ui';
 import Data from './component/Next/Data';
 import QuizRs from './component/Quiz/QuizRs';
 import CourseTemplate from './component/Next/CourseTemplate';
+import Upload from './component/Upload/Upload';
+import Disp from './component/Disp/Disp';
 
 function App (){
 
@@ -71,6 +73,8 @@ function App (){
           <Route path='/QuizPython' element={<QuizPython/>}></Route>
           <Route path='/QuizRs' element={<QuizRs/>}></Route>
           <Route path="/CourseTemplate" element={<CourseTemplate />} />
+          <Route path="/Upload" element={<Upload />} />
+          <Route path="/Disp" element={<Disp />} />
         </Routes>
       </Router>
     </div>

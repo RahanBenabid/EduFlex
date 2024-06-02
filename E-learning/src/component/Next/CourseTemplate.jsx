@@ -12,20 +12,16 @@ import axios from 'axios';
 function CourseTemplate() {
   const [course, setCourse] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isCreatingCourse, setIsCreatingCourse] = useState(false);
+  //const [isCreatingCourse, setIsCreatingCourse] = useState(false);
   const externalSource = "https://www.youtube.com/watch?v=jS4aFq5-91M";
 
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const courseTitle = "Cyber Security";
+        const courseTitle = "Cyber";
         const response = await axios.get(`http://localhost:3000/onlineCourse/course?courseTitle=${courseTitle}`);
         console.log('Response:', response.data); // Debug log
-        if (response.data.length > 0) {
-          setCourse(response.data[0]);
-        } else {
-          setIsCreatingCourse(true);
-        }
+        setCourse(response.data);
       } catch (error) {
         console.error("Error fetching course:", error);
       } finally {
@@ -57,19 +53,6 @@ function CourseTemplate() {
 
   if (isLoading) {
     return <div>Loading...</div>;
-  }
-
-  if (isCreatingCourse) {
-    return (
-      <div>
-        <p>Course not found. Do you want to create a new course?</p>
-        <button onClick={handleCreateCourse}>Create Course</button>
-      </div>
-    );
-  }
-
-  if (!course) {
-    return <div>Something went wrong.</div>;
   }
 
   return (
@@ -115,14 +98,15 @@ function CourseTemplate() {
                 </div>
               </a>
             </div>
+
           </div>
           <div className="s">
             <div className="ccourse-text">
               <h3>About The Course</h3>
               <ul className="list">
-                {course.courseAbout.map((item, index) => (
+                {course.courseAbout.map((course, index) => (
                   <li key={index}>
-                    {item.content} ({item.type})
+                    {course.content}
                   </li>
                 ))}
               </ul>
@@ -134,9 +118,9 @@ function CourseTemplate() {
               <h3>Course Content</h3>
               <div className="jas">
                 <ul className="contenu mmmmm">
-                  {course.courseContent.map((item, index) => (
+                  {course.courseContent.map((course, index) => (
                     <li key={index}>
-                      {item.content} ({item.type})
+                      {course.content}
                     </li>
                   ))}
                 </ul>

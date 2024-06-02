@@ -12,10 +12,11 @@ function Cs2() {
   const [isLoading, setIsLoading] = useState(true);
   const [isCreatingCourse, setIsCreatingCourse] = useState(false);
   const externalSource = "https://www.youtube.com/watch?v=jS4aFq5-91M";
+
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const courseTitle = "Cyber Security";
+        const courseTitle = "Cyber";
         const response = await fetch(
           `http://localhost:3000/onlineCourse/course?courseTitle=${courseTitle}`
         );
@@ -33,9 +34,10 @@ function Cs2() {
     };
     fetchCourse();
   }, []);
+
   const handleCreateCourse = async () => {
     try {
-      const courseTitle = "Cyber Security";
+      const courseTitle = "Cyber";
       const courseDescription = "Learn to hack lmao.";
       const response = await fetch("http://localhost:3000/onlineCourse/onlineCourses", {
         method: "POST",
@@ -46,7 +48,9 @@ function Cs2() {
       });
       if (response.ok) {
         const data = await response.json();
-        setCourse(data.course);
+        if (data.length > 0) {
+          setCourse(data[0]); // Assuming the response is an array
+        }
         setIsCreatingCourse(false);
       } else {
         console.error("Failed to create course");

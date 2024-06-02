@@ -1,31 +1,47 @@
 const mongoose = require('mongoose');
 
-
-// Define the course schema
 const onlineCourseSchema = new mongoose.Schema({
   courseName: {
     type: String,
-    required: true
+    required: true,
   },
   courseDescription: {
     type: String,
-    required: true
+    required: true,
   },
   courseComplete: {
     type: Boolean,
-    default: false
+    default: false,
   },
-  courseAbout: [{ // Array of objects
-    content: String, // String field for content
-    type: String // String field for content type
-  }],
-  courseContent: [{ // Array of objects
-    content: String, // String field for content
-    type: String // String field for content type
-  }]
+  courseAbout: [
+    {
+      content: {
+        type: String,
+        required: true,
+      },
+      type: {
+        type: String,
+        enum: ['text', 'video'], // You can add more types if needed
+        required: true,
+      },
+    },
+  ],
+  courseContent: [
+    {
+      content: {
+        type: String,
+        required: true,
+      },
+      type: {
+        type: String,
+        enum: ['module'], // You can add more types if needed
+        required: true,
+      },
+    },
+  ],
 });
 
-// Create the course model
+
 const onlineCourse = mongoose.model('OnlineCourse', onlineCourseSchema);
 
 module.exports = onlineCourse;

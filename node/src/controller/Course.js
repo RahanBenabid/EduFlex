@@ -1,3 +1,4 @@
+const fs = require('fs');
 const Course = require("../models/Course.js");
 const multer = require('multer');
 const path = require("path");
@@ -44,15 +45,18 @@ exports.addCourse = [
   async (req, res) => {
     try {
       const pdfSize = req.file.size;
-      const { title, description } = req.body;
+      const { userId, title, description } = req.body;
       const filepath = req.file.path;
+      const name = `${Date.now()}-${file.originalname}`;
       
       //save the model
       const newCourse = new Course({
         title,
+        name,
         description,
         fileSize: pdfSize,
         filepath,
+        userId,
       });
       const savedCourse = await newCourse.save();
       res
@@ -64,3 +68,31 @@ exports.addCourse = [
     }
   },
 ];
+
+// GET all the courses for a specific user
+exports.getUserCourses = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const courses = await Course.find({ userId });
+    
+    const pdfs = courses.map(course => {
+      const c = course.name
+      const filePath = path.join(__dirname, "../../../database/", `${c}.pdf`);
+      const fileData = fs.readFileSync(filePath);
+      const base64Data = fileData.toString('base64');
+
+      return {
+        name: course.name,
+        title: course.title,
+        description: course.description,
+        fileSize: course.fileSize,
+        fileData: base64Data,
+      };
+    });
+
+    res.json(pdfs);
+  } catch (e) {
+    console.log(e);
+    res.status(401).json({ message: "Server error" });
+  }
+};

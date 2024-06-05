@@ -8,6 +8,19 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.dashboardLink {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboardLink:hover {
+  background-color: #0056b3;
+}
 
 .course {
   background-color: #f5f5f5;

@@ -98,7 +98,7 @@ function SignUp() {
                 </div>
               </div>
 
-//            <button className="sign-btn lili" type="submit">
+            <button className="sign-btn lili" type="submit">
                 Sign Up
               </button>
 

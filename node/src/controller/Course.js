@@ -1,3 +1,4 @@
+const express = require('express');
 const fs = require('fs');
 const Course = require("../models/Course.js");
 const multer = require('multer');
@@ -9,7 +10,8 @@ const storage = multer.diskStorage({
     cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
-    cb(null, `${Date.now()}-${file.originalname}`);
+    const name = `${Date.now()}-${file.originalname}`;
+    cb(null, name);
   },
 });
 
@@ -44,30 +46,35 @@ exports.addCourse = [
   upload.single("file"), // Use the multer middleware to handle file uploads
   async (req, res) => {
     try {
-      const pdfSize = req.file.size;
+      if (!req.file) {
+        return res.status(400).json({ error: "No file uploaded" });
+      }
+
       const { userId, title, description } = req.body;
-      const filepath = req.file.path;
-      const name = `${Date.now()}-${file.originalname}`;
-      
-      //save the model
+      const name = req.file.filename;
+      const filepath = path.join(uploadDir, name);
+
+
+
+      // Save the course model
       const newCourse = new Course({
         title,
         name,
         description,
-        fileSize: pdfSize,
+        fileSize: req.file.size,
         filepath,
         userId,
       });
       const savedCourse = await newCourse.save();
-      res
-      .status(200)
-      .json({ message: "Course added successfully", course: savedCourse });
+
+      res.status(200).json({ message: "Course added successfully", course: savedCourse });
     } catch (e) {
       console.error(e);
       res.status(400).json({ error: "Failed to add course" });
     }
   },
 ];
+
 
 // GET all the courses for a specific user
 exports.getUserCourses = async (req, res) => {
@@ -76,8 +83,7 @@ exports.getUserCourses = async (req, res) => {
     const courses = await Course.find({ userId });
     
     const pdfs = courses.map(course => {
-      const c = course.name
-      const filePath = path.join(__dirname, "../../../database/", `${c}.pdf`);
+      const filePath = path.join(__dirname, "../../../database/", course.name);
       const fileData = fs.readFileSync(filePath);
       const base64Data = fileData.toString('base64');
 

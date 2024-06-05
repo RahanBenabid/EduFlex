@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./Next.css";
 import ReactPlayer from "react-player";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Header from "../Header";
 import data from "../../util/cs2.json";
 import { sliderSettings } from "../../util/commob";
 import Marker from "../../component/Marker/Marker";
-import axios from 'axios';
+import axios from "axios";
 
 function CourseTemplate() {
   const [course, setCourse] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  //const [isCreatingCourse, setIsCreatingCourse] = useState(false);
   const externalSource = "https://www.youtube.com/watch?v=jS4aFq5-91M";
+  
+  const userObject = JSON.parse(localStorage.getItem('user'));
+  const userId = userObject?._id;
 
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const courseTitle = "Cyber";
-        const response = await axios.get(`http://localhost:3000/onlineCourse/course?courseTitle=${courseTitle}`);
-        console.log('Response:', response.data); // Debug log
+        const courseTitle = "Great beginning to enter the world of programming";
+        const response = await axios.get(
+          `http://localhost:3000/onlineCourse/course?courseTitle=${courseTitle}`
+        );
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching course:", error);
@@ -30,26 +33,6 @@ function CourseTemplate() {
     };
     fetchCourse();
   }, []);
-
-  const handleCreateCourse = async () => {
-    try {
-      const courseTitle = "Cyber Security";
-      const courseDescription = "Learn to hack lmao.";
-      const response = await axios.post("http://localhost:3000/onlineCourse/onlineCourses", {
-        courseName: courseTitle,
-        courseDescription
-      });
-      if (response.status === 200) {
-        console.log('Course created:', response.data); // Debug log
-        setCourse(response.data.course);
-        setIsCreatingCourse(false);
-      } else {
-        console.error("Failed to create course");
-      }
-    } catch (error) {
-      console.error("Error creating course:", error);
-    }
-  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -69,11 +52,11 @@ function CourseTemplate() {
           <h2>{course.courseName}</h2>
           <div className="star">
             <p>Self-Paced Course |</p>
-            <img src="icons8-étoile-50.png" alt="star" />
-            <img src="icons8-étoile-50.png" alt="star" />
-            <img src="icons8-étoile-50.png" alt="star" />
-            <img src="icons8-étoile-50.png" alt="star" />
-            <img src="icons8-étoile-50.png" alt="star" />
+            <img src="etoile.png" alt="star" />
+            <img src="etoile.png" alt="star" />
+            <img src="etoile.png" alt="star" />
+            <img src="etoile.png" alt="star" />
+            <img src="etoile.png" alt="star" />
             <p id="pa">4.7/5 ratings</p>
           </div>
           <div className="video">
@@ -92,22 +75,38 @@ function CourseTemplate() {
                 <h6>Beginner To Advance</h6>
                 <h6>10 weeks</h6>
               </div>
-              <a href="cybersecurity.pdf" download="cybersecurity.pdf">
+              <a href="javascript.pdf" download="javascript.pdf">
                 <div className="dow">
-                  <button alt="Download Course">Download Course</button>
+                  <button alt="Download Course">
+                    <i>D</i>
+                    <i>o</i>
+                    <i>w</i>
+                    <i>n</i>
+                    <i>l</i>
+                    <i>o</i>
+                    <i>a</i>
+                    <i>d</i>
+                    <i>&nbsp;</i>
+                    <i>C</i>
+                    <i>o</i>
+                    <i>u</i>
+                    <i>r</i>
+                    <i>s</i>
+                    <i>e</i>
+                  </button>
                 </div>
               </a>
             </div>
-
           </div>
           <div className="s">
             <div className="ccourse-text">
               <h3>About The Course</h3>
+              <div className="ab">
+                <h4>{course.courseDescriptionTitle}</h4>
+              </div>
               <ul className="list">
-                {course.courseAbout.map((course, index) => (
-                  <li key={index}>
-                    {course.content}
-                  </li>
+                {course.courseAbout.map((item, index) => (
+                  <li key={index}>{item.content}</li>
                 ))}
               </ul>
             </div>
@@ -118,9 +117,11 @@ function CourseTemplate() {
               <h3>Course Content</h3>
               <div className="jas">
                 <ul className="contenu mmmmm">
-                  {course.courseContent.map((course, index) => (
+                  {course.courseContent.map((module, index) => (
                     <li key={index}>
-                      {course.content}
+                      {module.content}
+                      <br />
+                      <span id="sp">{course.underCourseContent[index]}</span>
                     </li>
                   ))}
                 </ul>
@@ -135,7 +136,7 @@ function CourseTemplate() {
                 </Swiper>
               </div>
             </div>
-            <Marker />
+            <Marker courseId={course._id} userId={userId} />
           </div>
           <div className="course-text1">
             <h3>Course Instructor</h3>
@@ -150,7 +151,17 @@ function CourseTemplate() {
               <h5 id="founder">Founder & CEO at EduFlex</h5>
               <div className="prof-text">
                 <p>
-                  Mr. Sandeep Jain graduated from Dr. Abdul Kalam Technical University with a B.Tech in Computer Science and Engineering. He completed his Master's degree from IIT-Roorkee and has worked as a full-time Software Developer at D.E. Shaw & Co. His passion for teaching led him to join JIIT Noida as an Assistant Professor. He has mentored over 20,000+ students. He started GeeksforGeeks in 2009 as a blog, to compile resources on programming, algorithms, and interview preparation. He has curated and mentored the Data Structures and Algorithms - Self-Paced course on GeeksforGeeks, helping thousands of students land their dream jobs.
+                  Mr. Sandeep Jain graduated from Dr. Abdul Kalam Technical
+                  University with a B.Tech in Computer Science and Engineering.
+                  He completed his Master's degree from IIT-Roorkee and has
+                  worked as a full-time Software Developer at D.E. Shaw & Co.
+                  His passion for teaching led him to join JIIT Noida as an
+                  Assistant Professor. He has mentored over 20,000+ students. He
+                  started GeeksforGeeks in 2009 as a blog, to compile resources
+                  on programming, algorithms, and interview preparation. He has
+                  curated and mentored the Data Structures and Algorithms -
+                  Self-Paced course on GeeksforGeeks, helping thousands of
+                  students land their dream jobs.
                 </p>
                 <div className="ass">
                   <h5>Associated Batches:</h5>
@@ -166,13 +177,3 @@ function CourseTemplate() {
 }
 
 export default CourseTemplate;
-
-export const SliderButtons = () => {
-  const swipe = useSwiper();
-  return (
-    <div className="flexStart r-button">
-      <button onClick={() => swipe.slidePrev()}>Previous</button>
-      <button onClick={() => swipe.slideNext()}>Next</button>
-    </div>
-  );
-};

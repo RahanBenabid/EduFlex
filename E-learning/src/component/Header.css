@@ -25,13 +25,14 @@
     display: flex;
     row-gap: 2rem;
     z-index: 9999;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     justify-content: center;
+    
     align-items: center;
     flex-wrap: wrap;
     gap: 3rem;
     color: var(--font-color);
-    margin-top: -5rem;
+    margin-top: -6rem;
     margin-left: 45rem;
 
 }

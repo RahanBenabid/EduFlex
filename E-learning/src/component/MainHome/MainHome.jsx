@@ -39,7 +39,7 @@ function MainHome() {
             }
         };
         if (token) fetchUser();
-        else navigate("/SignIn");
+        // else navigate("/SignIn");
     }, [navigate, token]);
     
     const handleLogout = () => {
@@ -53,7 +53,6 @@ function MainHome() {
         <Header></Header>
         <Home></Home>
         <BarHome></BarHome>
-        
         <Motivation></Motivation>
         <Bar></Bar>
         <Topics></Topics>
@@ -100,7 +99,8 @@ function MainHome() {
             </div>
         )}
         </div>
-        </>
+        </>
+
     )
     
 }

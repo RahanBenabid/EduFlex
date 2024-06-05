@@ -9,6 +9,9 @@ const onlineCourseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  courseDescriptionTitle: {
+    type: String,
+  },
   courseComplete: {
     type: Boolean,
     default: false,
@@ -39,6 +42,7 @@ const onlineCourseSchema = new mongoose.Schema({
       },
     },
   ],
+  underCourseContent: [{type: String,},],
 });
 
 

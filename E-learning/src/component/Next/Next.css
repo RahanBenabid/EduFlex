@@ -392,7 +392,8 @@ width: 100%;
 .s img {
     height: 500px;
     margin-top: 21rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
+    margin-right: 7rem;
 }
 
 #pdf {
@@ -627,3 +628,8 @@ button:hover i:nth-child(15) {
     font-size: 1.5rem;
    
 }
+
+
+/* .headlol {
+    padding-top: 5rem!important;
+} */

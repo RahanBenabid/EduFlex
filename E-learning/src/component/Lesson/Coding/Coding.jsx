@@ -111,31 +111,7 @@ function Coding() {
 
                 </div>
 
-                <h1 className="mo">Tutorial</h1>
-                <div className="coding-card">
-
-                    <div className="course-card">
-                        <img src="téléchargement (19).jpg" />
-
-                        <div className="category">
-                            <div className="subject">
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="course-card">
-                        <img src="Enseignant_Parlant_Avec_Ses_élèves_En_Ligne_Photo_Gratuite.jpg" />
-
-
-                    </div>
-                    <div className="course-card">
-                        <img src="Premium Photo _ Woman working in call center.jpg" />
-
-
-                    </div>
-                </div>
+                
 
 
                 <h1 className="mo">Video</h1>
@@ -144,14 +120,7 @@ function Coding() {
                     <div className="course-card">
                         <img src="react.PNG" />
 
-                        {/* <ReactPlayer
-                  url="https://youtu.be/nJTsbZojero"
-                  controls
-                  width="650px"
-                  height="400px"
-                  
-        
-                /> */}
+                        
                         <div className="category">
                             <div className="subject">
                                 <div className="code">

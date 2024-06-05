@@ -116,9 +116,9 @@ input:checked {
 }
 
 .todos-container {
-    height: 350px;
-
-    overflow: overlay;
+    /* height: 350px; Set a fixed height for the container 
+    overflow-y: auto; Add scroll for vertical overflow */
+    padding-bottom: 20px;
 }
 
 .todos-container::-webkit-scrollbar-track {
@@ -152,6 +152,7 @@ input:checked {
     border-radius: 100px;
     border: 2px solid #DAA69B;
     transition: all 0.2s ease;
+    background-color: #DAA69B;
     cursor: pointer;
 }
 

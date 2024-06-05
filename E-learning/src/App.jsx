@@ -47,6 +47,7 @@ function App (){
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Coding" element={<Coding />} />
+
           <Route path='/Next' element={<Next></Next>}></Route>
           <Route path='/PHPnext' element={<PHPnext />}></Route>
           <Route path='/Compnext' element={<Compnext />}></Route>
@@ -56,18 +57,23 @@ function App (){
           <Route path='/NodeNext' element={<NodeNext />}></Route>
           <Route path='/ReactNext' element={<ReactNext />}></Route>
           <Route path='/S' element={<S />}></Route>
+
           <Route path='/Quiz' element={<Quiz />}></Route>
           <Route path='/Dashboard' element={<Dashboard />}></Route>
           <Route path='/Suite' element={<Suite/>}></Route>
+
           <Route path='/Ai1' element={<Ai1/>}></Route>
           <Route path='/Ai2' element={<Ai2/>}></Route>
           <Route path='/Ai3' element={<Ai3/>}></Route>
+          
           <Route path='/Cs1' element={<Cs1/>}></Route>
           <Route path='/Cs2' element={<Cs2/>}></Route>
           <Route path='/Cs3' element={<Cs3/>}></Route>
+
           <Route path='/Reseau1' element={<Reseau1/>}></Route>
           <Route path='/Reseau2' element={<Reseau2/>}></Route>
           <Route path='/Reseau3' element={<Reseau3/>}></Route>
+
           <Route path='/Ui' element={<Ui/>}></Route>
           <Route path='/Data' element={<Data/>}></Route>
           <Route path='/QuizPython' element={<QuizPython/>}></Route>

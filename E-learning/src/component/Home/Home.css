@@ -31,7 +31,6 @@ margin-top:5rem;
 }
 
 .home-title {
-   
     z-index: 1;
     margin-left: 2rem;
     font-size: 2.8rem;
@@ -42,12 +41,12 @@ margin-top:5rem;
     color: rgba(231, 92, 92, 0.732);
 }
 .secondary-text{
+    padding: 0.5rem;
     margin-left: 2rem;
     margin-top: 1rem;
-    font-size: 1.5rem;
-
-    color: rgb(50, 48, 62);
-
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgb(50, 48, 62);;
 }
 .bbhome{
     margin-top: 3rem;
@@ -82,20 +81,6 @@ font-weight: 300;
   display: flex;
   align-items: center;
 }
-
-/* .oinput {
-  width: 50px;
-  height: 40px;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  margin-left: 16rem;
-  margin-top: -8rem;
-  padding: 18px 18px;
-  background-color: transparent;
-  background-color:#DAA69B;
-  transition: all .5s ease-in-out;
-} */
 
 .oinput::placeholder {
   

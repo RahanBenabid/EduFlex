@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import styles from './Upload.module.css';
 
 const FileUpload = () => {
@@ -31,13 +31,13 @@ const FileUpload = () => {
       formData.append('userId', userId);
       formData.append('title', title);
       formData.append('description', description);
-
+  
       const response = await axios.post('http://localhost:3000/course/userCourses', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-
+  
       console.log('File uploaded successfully:', response.data);
       navigate('/');
     } catch (error) {
@@ -47,6 +47,11 @@ const FileUpload = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.header}>
+        <Link to="/Dashboard" className={styles.dashboardLink}>
+          Dashboard
+        </Link>
+      </div>
       <h2 className={styles.heading}>Upload File</h2>
       <div className={styles.inputContainer}>
         <input

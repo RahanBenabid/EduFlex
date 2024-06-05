@@ -1,77 +1,87 @@
-.faqs{
-  margin: 1rem;
-    margin-top: 6rem;
+.faqs {
+    margin: 6rem 1rem 1rem;
 }
-#faqt{
- 
- font-size: 2.5rem;
- margin-left: 8.3rem!important;
- color: var(--font-color);
- margin: 4rem;
+
+#faqt {
+    font-size: 2.5rem;
+    margin: 10rem 4rem 4rem;
+    color: var(--font-color);
 }
-.faq-container{
-    display:  grid;
-    grid-template-columns: 1fr 1fr;
+
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
     gap: 1.4rem;
-    
-    
+    width: 100%;
 }
-.faq{
-    padding:2rem;
+
+
+.faq {
+    padding: 1.5rem; /* Reduced padding */
     display: flex;
     align-items: center;
-    gap: 1.4rem;
-    box-shadow: 0px 23px 21px -8px rgba(252, 168, 172, 0.308);;
-    height: fit-content;
+    justify-content: space-between; /* Ensures proper spacing */
+    gap: 1rem; /* Reduced gap */
+    box-shadow: 0 23px 21px -8px rgba(252, 168, 172, 0.308);
     background-color: var(--second_color);
     cursor: pointer;
-
+    height: fit-content;
+    box-sizing: border-box; /* Include padding and border in the width and height calculations */
+    width: 100%; /* Ensure FAQ items take the full width of their grid cell */
 }
-.faq h4{
-    font-size: 1.3rem;
-    line-height: 2.2;
+
+.faq h4 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
     color: var(--font-color);
-
 }
+
 .faq-icon {
-   margin-top: .3rem;
-   
+    margin-top: 0.3rem;
     font-size: 1.2rem;
     width: 25px;
 }
-.faq p{
-    margin-top: .8rem;
+
+.faq p {
+    margin-top: 0.8rem;
     display: none;
 }
 
 .faq.open p {
     display: block;
 }
-.hide{
+
+.hide {
     display: none;
 }
-.question-answer p{
+
+.question-answer p {
     font-size: 16px;
     color: rgb(67, 67, 67);
 }
-.iw{
-    margin: 4rem;
-    margin-left: 35rem;
-   
-   
+
+.iw {
+    margin: 4rem 4rem 4rem 35rem;
 }
-.iw input{
+
+.iw input {
     border: 1px solid grey;
     height: 15px;
     margin-right: 2rem;
     border-radius: 21px;
 }
-.supp{
-    margin-left: 43rem;
+
+.supp {
     font-family: sans-serif;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 3rem;
     background-color: var(--second_color);
     border: none;
     color: var(--font-color);
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+input {
+    font-size: 16px; /* Adjust this value to your desired font size */
 }

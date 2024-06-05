@@ -100,7 +100,10 @@ margin-left: -1rem;
   margin-bottom: 2rem;
 }
 
-
+.input-wrap input {
+    color:#0c0251
+  
+} 
 
 
 .input-field {

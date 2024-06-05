@@ -57,10 +57,7 @@ const Profile = () => {
                     </div>
                 </div>
             )}
-        <Link to="/">
-        <img src="icons8-utilisateur-48.png" alt="Edit Profile" />
-        Profile
-        </Link>
+        
         </div>
         
     );

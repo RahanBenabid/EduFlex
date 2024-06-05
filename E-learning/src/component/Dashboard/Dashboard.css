@@ -4,31 +4,23 @@
 }
 
 .boardcontainer {
-
-
     background-color: var(--main_color);
 }
 
-.boardtitle {}
-
 .editeprofile {
-
     display: flex;
 }
 
 .boardleft {
-
     border: 1px solid rgb(209, 208, 208);
     background-color: #fff;
     border-radius: 3px;
     width: 40%;
     margin-left: 7rem !important;
     margin: 1rem;
-
 }
 
 .boardright {
-
     width: 60%;
     margin-left: -4rem !important;
     margin: 1rem;
@@ -36,13 +28,11 @@
 
 .ph {
     display: flex;
-
 }
 
 .ph h1 {
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     margin-left: 1rem;
-
 }
 
 .profile-card p {
@@ -51,6 +41,32 @@
     margin-top: -2.4rem;
 }
 
-.profile-card span{
+.profile-card span {
     color: #Daa69B;
+}
+
+.buttons {
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.buttons button {
+    padding: 1rem 2rem;
+    margin: 5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }

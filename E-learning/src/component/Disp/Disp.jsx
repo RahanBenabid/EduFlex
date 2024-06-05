@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Disp.module.css';
 
@@ -32,6 +33,9 @@ const Disp = () => {
 
   return (
     <div className={styles.container}>
+      <Link to="/Dashboard" className={styles.dashboardLink}>
+          Dashboard
+        </Link>
       <h1 className={styles.heading}>My Courses</h1>
       {courses.length > 0 ? (
         courses.map((course) => (
@@ -39,7 +43,7 @@ const Disp = () => {
             <h2 className={styles.courseTitle}>{course.title}</h2>
             <p className={styles.courseDescription}>{course.description}</p>
             <p className={styles.courseFileSize}>File Size: {course.fileSize}</p>
-            <embed
+            <iframe
               src={`data:application/pdf;base64,${course.fileData}`}
               type="application/pdf"
               width="100%"
